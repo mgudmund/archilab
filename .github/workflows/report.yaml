@@ -11,4 +11,8 @@ jobs:
         uses: mgudmund/archi-action@v1.6
         with:
           options: '--html.createReport ./docs'
-     
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
