@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  run-archi-cli:
+    runs-on: ubuntu-latest
+    name: Run Archi CLI
+    steps:
+      - uses: actions/checkout@v3
+      - name: Archi CLI Report
+        id: archi-cli
+        uses: mgudmund/archi-action@v1.6
+        with:
+          options: '--html.createReport ./docs'
+     
