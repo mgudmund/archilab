@@ -11,6 +11,10 @@ jobs:
         uses: mgudmund/archi-action@v1.9
         with:
           options: '--html.createReport ./docs'
+      - name: ls
+        run: ls -la
+      - name: pwd
+        run: pwd
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
